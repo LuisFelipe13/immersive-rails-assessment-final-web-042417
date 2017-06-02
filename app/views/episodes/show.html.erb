@@ -7,9 +7,4 @@
 <ul>
   <% @episode.guests.each do |guest| %>
     <li><%= link_to guest.name, guest %></li>
-    <!-- <li><%= link_to 'Edit', "/appearances/#{guest.id}/edit"%></li>
-  <% end %> -->
-  <!-- the code above ^^^ was me finishing but working my way to getting the right ID to interprolate into the link/route to make it work properly if I had more time I would've cracked it-->
 </ul>
-<%= link_to 'Edit', edit_appearance_path %>
-  <!-- the code above sorta of works in the sense that it will take you to an edit form where you can edit any appearance however whenever you get passed a certain amount of ID's (like guests passed ID's with 7 or so... there is no appearances yet that match that ID)-->

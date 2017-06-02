@@ -23,10 +23,10 @@ class AppearancesController < ApplicationController
 
   def update
     @appearance = Appearance.find(params[:id])
-    if @appearance.update(appearance_params)
+    if @appearance.update(appearance_params(:rating))
       redirect_to @appearance.episode
     else
-      redirect_to new_appearance_path
+      redirect_to edit_appearance_path(@appearance)
     end
   end
 
